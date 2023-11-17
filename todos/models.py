@@ -23,7 +23,8 @@ class Task(models.Model):
 class SubTask(models.Model):
     name = models.CharField(max_length=200)
     body = models.TextField()
-    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    task = models.ForeignKey(Task, on_delete=models.CASCADE,
+                             related_name='sub_tasks')
     completed = models.BooleanField(default=False)
 
     class Meta:
