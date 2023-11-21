@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from todos.models import Task
+from todos.models import Task, SubTask
 
 
 class TaskSerializer(serializers.ModelSerializer):
@@ -8,3 +8,8 @@ class TaskSerializer(serializers.ModelSerializer):
         model = Task
         fields = '__all__'
 
+
+class SubTaskSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SubTask
+        fields = '__all__'
