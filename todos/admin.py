@@ -7,7 +7,8 @@ class TaskAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'body',
-        'priority'
+        'priority',
+        'author'
     )
 
 
