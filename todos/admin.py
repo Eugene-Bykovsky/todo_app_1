@@ -3,6 +3,7 @@ from django.contrib import admin
 from .models import Task, SubTask
 
 
+@admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
     list_display = (
         'name',
@@ -12,6 +13,7 @@ class TaskAdmin(admin.ModelAdmin):
     )
 
 
+@admin.register(SubTask)
 class SubTaskAdmin(admin.ModelAdmin):
     list_display = (
         'name',
@@ -21,6 +23,4 @@ class SubTaskAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Task, TaskAdmin)
-admin.site.register(SubTask, SubTaskAdmin)
 admin.site.site_header = 'Админпанель ToDo'
